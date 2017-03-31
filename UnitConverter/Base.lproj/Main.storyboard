@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="In KiloByte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceV-Gd-x8P">
+                                <rect key="frame" x="213" y="137" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Click update for the Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9S-aY-JAt">
+                                <rect key="frame" x="0.0" y="333" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zdT-rE-nFE">
+                                <rect key="frame" x="135" y="283" width="51" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Ze-A3-iCT">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2c-e7-V4n">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
+                                                <state key="normal" title="Update"/>
+                                                <connections>
+                                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2tg-vy-aDD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziT-49-rh8">
+                                <rect key="frame" x="16" y="133" width="170" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eho-1T-FwF">
+                                <rect key="frame" x="0.0" y="228" width="320" height="29"/>
+                                <segments>
+                                    <segment title="MegaByte"/>
+                                    <segment title="GigaByte"/>
+                                    <segment title="TeraByte"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentController:" destination="BYZ-38-t0r" eventType="valueChanged" id="V12-JR-xOR"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F9S-aY-JAt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1w8-xe-shh"/>
+                            <constraint firstItem="eho-1T-FwF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lrh-vF-lbv"/>
+                            <constraint firstItem="o2c-e7-V4n" firstAttribute="centerX" secondItem="F9S-aY-JAt" secondAttribute="centerX" id="Pmh-KS-9n1"/>
+                            <constraint firstItem="F9S-aY-JAt" firstAttribute="top" secondItem="o2c-e7-V4n" secondAttribute="bottom" constant="20" id="Z8r-aA-S8T"/>
+                            <constraint firstItem="F9S-aY-JAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="chw-LG-f0Y"/>
+                            <constraint firstItem="ceV-Gd-x8P" firstAttribute="leading" secondItem="ziT-49-rh8" secondAttribute="trailing" constant="23" id="daK-DN-vPN"/>
+                            <constraint firstItem="eho-1T-FwF" firstAttribute="top" secondItem="ziT-49-rh8" secondAttribute="bottom" constant="65" id="olb-aF-4Eo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="ziT-49-rh8" id="M6W-a3-Plc"/>
+                        <outlet property="outputField" destination="F9S-aY-JAt" id="CRo-mb-uXa"/>
+                        <outlet property="segmentController" destination="eho-1T-FwF" id="z5G-Le-Aao"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="396"/>
+        </scene>
+    </scenes>
+</document>
